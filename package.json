@@ -1,0 +1,16 @@
+{
+  "name": "ledger-reconciliation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "作業メモとタスク台帳の差を人が確認する公開デモ",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check server.mjs && node --check app.js"
+  },
+  "dependencies": {}
+}

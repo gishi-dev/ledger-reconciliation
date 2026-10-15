@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>作業メモとタスク台帳の確認 | 公開デモ</title>
+<link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script>
+</head>
+<body>
+<header><span>公開デモ / ledger-reconciliation</span><h1>作業メモとタスク台帳の確認</h1><p>差を候補にする。元の記録を見て、人が決める。</p></header>
+<main>
+<aside><strong>サンプル印刷・6名の架空データ</strong><p>保存済みのAI候補を再生しています。その場でAIを呼んでいません。台帳やメモを変えてもAIは再処理しません。送信・通知・台帳の自動更新はありません。</p><p>入力・判断はこのタブ内だけに保持します。再読み込みで初期化されるため、終了前にJSONを書き出してください。実データは入力しないでください。</p></aside>
+<nav><button data-view="input">1 入力</button><button data-view="candidates">2 候補と質問</button><button data-view="review">3 元の記録と判断</button><button data-view="output">4 確認待ち・書き出し</button></nav>
+<p id="message" role="status" aria-live="polite"></p><p id="stale" class="warning"></p>
+<section id="input" hidden><h2>1 台帳と作業メモ</h2>
+<div class="controls"><label>基準日<input id="base-date" type="date" value="2026-10-15"></label><label>停滞の目安（暦日）<input id="days" type="number" min="1" max="365" value="7"></label><button id="settings-save">条件を適用</button></div>
+<p>基準日から最終更新が7暦日以上で、メモに進展なし、という試作の仮基準です。実務の推奨値ではありません。日数はコードで計算し、進展の有無は人が元のメモで確認します。</p>
+<details open><summary>台帳の一覧</summary><div id="ledger-table" class="scroll"></div></details>
+<details><summary>メモの一覧</summary><div id="memo-table" class="scroll"></div></details>
+<div class="columns"><div><h3>台帳の追加・編集</h3><p>同じ行番号なら上書き、新しい番号なら追加します。</p><form id="ledger-form"></form></div><div><h3>メモの追加・編集</h3><p>一覧の「編集」で読み込み、保存してください。</p><form id="memo-form"></form></div></div>
+<details><summary>任意の生成AI用の入力と指示・出力の貼り付け</summary><p>外部へ送る機能はありません。架空データのみ、コピーして任意の生成AIに手動で渡せます。</p><button id="prepare">現在のデータと指示を作る</button><label>コピー用の指示<textarea id="prompt" readonly rows="10"></textarea></label><button id="copy-prompt">指示をコピー</button><label>AI出力JSON<textarea id="import-json" rows="10"></textarea></label><button id="import">番号と状態を検査して取り込む</button><p>判断後の候補の取り替えは履歴の混在を避けるため停止します。先に書き出し、再読み込みで別の試行を始めてください。</p></details>
+</section>
+<section id="candidates" hidden><h2>2 候補と人への質問</h2><p id="source"></p><div id="candidate-table" class="scroll"></div><h3>誰に・何を確かめるか（下書き）</h3><div id="questions" class="scroll"></div><h3>食い違いなしとされたメモ</h3><div id="no-difference"></div></section>
+<section id="review" hidden><h2>3 元の記録を見て判断</h2><label>確認する候補・メモ<select id="selection"></select></label><button id="open-records">元の記録を開く</button><p>記録を開くまで採用できません。担当・期限・状態を推測で埋めず、元の依頼・合意を確かめてください。</p><div id="records"></div><form id="decision-form" hidden><h3>人が決める内容</h3><div class="controls"><label>判断する人<select id="actor"></select></label><label>判断<select id="decision"><option>採用</option><option>保留</option><option>除外</option></select></label></div><label>理由（必須）<textarea id="reason" required rows="2"></textarea></label><fieldset><legend>採用時の台帳への変更案（人が入力）</legend><label>変える列<select id="column"><option>担当</option><option>期限</option><option>状態</option><option>最終更新日</option></select></label><label>正式な変更後の値<input id="new-value" placeholder="正式な担当・期限・状態など"></label><p>登録漏れは「新規行」として案件・担当・期限・状態・最終更新日をすべて入力します。行番号の割り当ては実際の台帳を直す人が行います。</p><div id="new-row-fields"></div></fieldset><fieldset><legend>保留の確認先と期限</legend><label>確認する人<select id="ask-person"></select></label><label>確認期限<input id="ask-date" type="date"></label></fieldset><button type="submit" id="save-decision">判断を記録</button></form></section>
+<section id="output" hidden><h2>4 台帳への変更案と確認待ち</h2><p>変更案は現在の台帳を書き換えません。同じ列の複数案は人が統合してください。</p><h3>採用した候補の変更案</h3><div id="proposals" class="scroll"></div><h3>確認待ち（未確認・保留）</h3><div id="pending" class="scroll"></div><h3>判断の履歴</h3><div id="history" class="scroll"></div><button id="export">JSONを書き出す</button><label>書き出し内容のプレビュー<textarea id="export-preview" readonly rows="9"></textarea></label></section>
+</main><footer>AIは候補と質問の下書き。コードは対応と履歴。正式な担当・期限・状態は人が決めます。</footer>
+</body></html>

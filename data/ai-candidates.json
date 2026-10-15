@@ -1,0 +1,252 @@
+{
+  "results": [
+    {
+      "memoId": "M01",
+      "rowId": null,
+      "candidates": [
+        {
+          "type": "登録漏れ",
+          "rowId": null,
+          "reason": "新規案件の記載が台帳にない。",
+          "askTo": "営業あ",
+          "question": "元の依頼・合意を見て、正式な担当・期限・現在の状態を確認してください。",
+          "status": "人の確認待ち"
+        }
+      ],
+      "noDifferenceReason": ""
+    },
+    {
+      "memoId": "M02",
+      "rowId": null,
+      "candidates": [
+        {
+          "type": "登録漏れ",
+          "rowId": null,
+          "reason": "追加案件の記載が台帳にない。",
+          "askTo": "営業い",
+          "question": "元の依頼・合意を見て、正式な担当・期限・現在の状態を確認してください。",
+          "status": "人の確認待ち"
+        }
+      ],
+      "noDifferenceReason": ""
+    },
+    {
+      "memoId": "M03",
+      "rowId": "L01",
+      "candidates": [
+        {
+          "type": "期限の不一致",
+          "rowId": "L01",
+          "reason": "合意した期限と台帳の期限が異なる。",
+          "askTo": "制作あ",
+          "question": "元の依頼・合意を見て、正式な担当・期限・現在の状態を確認してください。",
+          "status": "人の確認待ち"
+        }
+      ],
+      "noDifferenceReason": ""
+    },
+    {
+      "memoId": "M04",
+      "rowId": "L02",
+      "candidates": [
+        {
+          "type": "期限の不一致",
+          "rowId": "L02",
+          "reason": "合意した期限と台帳の期限が異なる。",
+          "askTo": "制作い",
+          "question": "元の依頼・合意を見て、正式な担当・期限・現在の状態を確認してください。",
+          "status": "人の確認待ち"
+        }
+      ],
+      "noDifferenceReason": ""
+    },
+    {
+      "memoId": "M05",
+      "rowId": "L03",
+      "candidates": [
+        {
+          "type": "担当不明",
+          "rowId": "L03",
+          "reason": "担当交代は相談であり、正式な担当は未確定。",
+          "askTo": "印刷あ",
+          "question": "元の依頼・合意を見て、正式な担当・期限・現在の状態を確認してください。",
+          "status": "人の確認待ち"
+        }
+      ],
+      "noDifferenceReason": ""
+    },
+    {
+      "memoId": "M06",
+      "rowId": "L04",
+      "candidates": [
+        {
+          "type": "担当不明",
+          "rowId": "L04",
+          "reason": "引き継ぎ先の確認が必要。",
+          "askTo": "管理あ",
+          "question": "元の依頼・合意を見て、正式な担当・期限・現在の状態を確認してください。",
+          "status": "人の確認待ち"
+        }
+      ],
+      "noDifferenceReason": ""
+    },
+    {
+      "memoId": "M07",
+      "rowId": "L06",
+      "candidates": [
+        {
+          "type": "長く停滞",
+          "rowId": "L06",
+          "reason": "更新から10暦日、メモにも進展なし。",
+          "askTo": "営業あ",
+          "question": "元の依頼・合意を見て、正式な担当・期限・現在の状態を確認してください。",
+          "status": "人の確認待ち"
+        }
+      ],
+      "noDifferenceReason": ""
+    },
+    {
+      "memoId": "M08",
+      "rowId": "L07",
+      "candidates": [
+        {
+          "type": "長く停滞",
+          "rowId": "L07",
+          "reason": "更新から7暦日、メモにも進展なし。",
+          "askTo": "営業い",
+          "question": "元の依頼・合意を見て、正式な担当・期限・現在の状態を確認してください。",
+          "status": "人の確認待ち"
+        }
+      ],
+      "noDifferenceReason": ""
+    },
+    {
+      "memoId": "M09",
+      "rowId": "L01",
+      "candidates": [],
+      "noDifferenceReason": "台帳と一致。"
+    },
+    {
+      "memoId": "M10",
+      "rowId": "L02",
+      "candidates": [],
+      "noDifferenceReason": "台帳と一致。"
+    },
+    {
+      "memoId": "M11",
+      "rowId": "L03",
+      "candidates": [],
+      "noDifferenceReason": "台帳と一致。"
+    },
+    {
+      "memoId": "M12",
+      "rowId": "L04",
+      "candidates": [],
+      "noDifferenceReason": "台帳と一致。"
+    },
+    {
+      "memoId": "M13",
+      "rowId": "L05",
+      "candidates": [],
+      "noDifferenceReason": "台帳と一致。"
+    },
+    {
+      "memoId": "M14",
+      "rowId": "L09",
+      "candidates": [],
+      "noDifferenceReason": "台帳と一致。"
+    },
+    {
+      "memoId": "M15",
+      "rowId": "L10",
+      "candidates": [],
+      "noDifferenceReason": "台帳と一致。"
+    },
+    {
+      "memoId": "M16",
+      "rowId": "L11",
+      "candidates": [],
+      "noDifferenceReason": "台帳と一致。"
+    },
+    {
+      "memoId": "M17",
+      "rowId": "L12",
+      "candidates": [],
+      "noDifferenceReason": "台帳と一致。"
+    },
+    {
+      "memoId": "M18",
+      "rowId": "L13",
+      "candidates": [],
+      "noDifferenceReason": "台帳と一致。"
+    },
+    {
+      "memoId": "M19",
+      "rowId": "L14",
+      "candidates": [],
+      "noDifferenceReason": "台帳と一致。"
+    },
+    {
+      "memoId": "M20",
+      "rowId": "L15",
+      "candidates": [],
+      "noDifferenceReason": "台帳と一致。"
+    },
+    {
+      "memoId": "M21",
+      "rowId": "L03",
+      "candidates": [],
+      "noDifferenceReason": "表記揺れだが同じ案件。担当・期限の差なし。"
+    },
+    {
+      "memoId": "M22",
+      "rowId": "L05",
+      "candidates": [],
+      "noDifferenceReason": "M22の変更相談はM23で取り消し。台帳の10月24日と一致。"
+    },
+    {
+      "memoId": "M23",
+      "rowId": "L05",
+      "candidates": [],
+      "noDifferenceReason": "M22の変更相談はM23で取り消し。台帳の10月24日と一致。"
+    },
+    {
+      "memoId": "M24",
+      "rowId": "L12",
+      "candidates": [
+        {
+          "type": "期限の不一致",
+          "rowId": "L12",
+          "reason": "台帳は10月23日、メモは10月30日。",
+          "askTo": "営業い",
+          "question": "正式な期限は10月30日でよいですか。",
+          "status": "人の確認待ち"
+        },
+        {
+          "type": "担当不明",
+          "rowId": "L12",
+          "reason": "引き継ぎ先が未定。",
+          "askTo": "管理あ",
+          "question": "正式な担当は誰ですか。",
+          "status": "人の確認待ち"
+        }
+      ],
+      "noDifferenceReason": ""
+    },
+    {
+      "memoId": "M25",
+      "rowId": "L08",
+      "candidates": [
+        {
+          "type": "長く停滞",
+          "rowId": "L08",
+          "reason": "台帳は14暦日未更新だが、メモに進展があるため仮基準の停滞には該当しない。状態の確認用に残す。",
+          "askTo": "制作い",
+          "question": "初稿後の正式な状態と更新日を確認してください。完了の合意はありますか。",
+          "status": "人の確認待ち"
+        }
+      ],
+      "noDifferenceReason": ""
+    }
+  ]
+}
